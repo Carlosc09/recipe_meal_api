@@ -1,0 +1,48 @@
+###
+GET http://localhost:8000/api/recipe HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:8000/api/recipe/1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:8000/api/recipe HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Hot cakes",
+    "category": "breakfast",
+    "instructions": "Mix ingredients and cook on a skillet.",
+    "ingredients": "flour, eggs, milk, sugar, baking powder",
+    "prep_time": 15
+}
+
+###
+DELETE  http://localhost:8000/api/recipe/4 HTTP/1.1
+Content-Type: application/json
+
+### Meal Plans
+GET http://localhost:8000/api/meal_plans HTTP/1.1
+Content-Type: application/json
+
+###
+GET http://localhost:8000/api/meal_plans/1 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:8000/api/meal_plans HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Weekly Dinner Plan",
+    "date": "2023-10-01",
+    "recipe_ids": "[1, 2]",
+    "notes": "Includes spaghetti bolognese"
+}
+
+###
+DELETE  http://localhost:8000/api/meal_plans/2 HTTP/1.1
+Content-Type: application/json
+
+
